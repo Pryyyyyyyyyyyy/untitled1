@@ -12,7 +12,7 @@
 
 import java.util.Scanner;
 
-public class Main {
+public class Serhii {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите высоту ромба: ");

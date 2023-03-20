@@ -9,7 +9,7 @@
    Остаток от деления равен - (значение остатка от делеения, в виде целого числа, без вещественной части).
    Знаменатель равен - (значения знаменателя в виде целой части, без вещечтвенной части).
 
-public class Main {
+public class Serhii {
     public static void main(String[] args) {
         double chislitel = 7.0;
         double znamenatel = 5.0;
