@@ -1,6 +1,4 @@
 package functions;
-package functions;
-
 
 import org.openqa.selenium.WebDriver;
 
@@ -27,10 +25,6 @@ public class Assertions {
                 "Я ожидал получить текст "+expectectText+". А получил "+
                         elements.getElementText(elements.findElementByXpath(xpath))+".");
     }
-    public void equalsOfInts(int actual, int expectect){
-        assertEquals(actual,expectect,
-                "Я ожидал получить текст "+expectect+". А получил "+
-                        actual+".");
-    }
+
 }
 

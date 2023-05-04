@@ -1,11 +1,6 @@
 package functions;
 
-package driver;
 
-import functions.Action;
-import functions.Assertions;
-import functions.Elements;
-import functions.Waiters;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;

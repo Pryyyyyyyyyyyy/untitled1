@@ -1,17 +1,14 @@
 package functions;
 
-package functions;
-
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.logging.Logger;
 
 public class Elements {
-    static final Logger logger = LoggerFactory.getLogger(Elements.class);
+    static final Logger logger = Logger.getLogger(String.valueOf(Elements.class));
     private final WebDriver driver;
     private final Waiters waiters;
 
@@ -57,7 +54,7 @@ public class Elements {
         waiters.waitForVisabilityOfElement(element);
         element.click();
     }
-    public void clickOnElement(By by){
+    public void clickOnElement2(By by){
         WebElement element= waiters.waitForPresenceOfElementReturn(by);
         logger.info("Click on element located by"+by);
         element.click();

@@ -101,4 +101,9 @@ public class Waiters {
         waitForFunction(ExpectedConditions
                 .frameToBeAvailableAndSwitchToIt(By.xpath(xpath)), EXPLICITY_WAIT);
     }
+    public void waitForTextToBePresentInElementValue(By by, String text) {
+        logger.info("Waiting for text '" + text + "' to be present in element value located by " + by.toString());
+        long EXPLICIT_WAIT = 20;
+        fluentWait(EXPLICIT_WAIT).until(ExpectedConditions.textToBePresentInElementValue(by, text));
+    }
 }

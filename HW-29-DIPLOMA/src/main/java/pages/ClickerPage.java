@@ -1,3 +1,4 @@
+/*
 package pages;
 
 import org.openqa.selenium.By;
@@ -39,9 +40,7 @@ public class ClickerPage extends BasePage{
     public int getIntFromCounter(){
         return Integer.parseInt(elements.getElementText(Locators.counter));
     }
-    public void checkCounter(int expected){
-        assertions.equalsOfInts(getIntFromCounter(),expected);
-    }
+
     public void openPage(){
         driver.get(Labels.url);
     }
@@ -53,14 +52,5 @@ public class ClickerPage extends BasePage{
         elements.clickOnElement(Locators.reset);
     }
 
-    public void resetWork(){
-        plusClick(5);
-        scrollPage();
-        resetClick();
-        assertions.equalsOfInts(getIntFromCounter(),0);
 
-
-    }
-
-
-}
+}*/
