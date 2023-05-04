@@ -1,3 +1,6 @@
+package functions;
+
+import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -38,6 +41,7 @@ public class DriverFactory1 {
 public class Waiters1 {
     private final WebDriver driver;
     private final Logger logger = LoggerFactory.getLogger(Waiters1.class);
+    private long EXPLICIT_WAIT;
 
     public Waiters1(WebDriver driver) {
         this.driver = driver;
@@ -62,6 +66,7 @@ public class Waiters1 {
     }
 
     private FluentWait<WebDriver> fluentWait(long timeoutSeconds) {
+        long POLLING_INTERVAL;
         return new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(timeoutSeconds))
                 .pollingEvery(Duration.ofMillis(POLLING_INTERVAL))
@@ -96,13 +101,15 @@ public class Assertions1 {
         this.driver = driver;
     }
 
-    public void assertElementIsDisplayed(By by) {
+    public void assertElementIsDisplayed(@NotNull By by) {
         logger.info("Asserting that element located by " + by.toString() + " is displayed");
-        assertTrue(driver.findElement(by).isDisplayed(),
-                "Element located by " + by.toString() + " is not displayed, but it should be");
+        assertTrue("Element located by " + by.toString() + " is not displayed, but it should be",
+                driver.findElement(by).isDisplayed());
     }
 
-    public void assertTextEquals(By by, String expectedText) {
+    public void assertTextEquals(@NotNull By by, String expectedText) {
         logger.info("Asserting that element located by " + by.toString() + " has text equal to '" + expectedText + "'");
         assertEquals(driver.findElement(by).getText(), expectedText,
-                "Element located by " + by.toString() + " has text '" + driver.findElement(by).getText()
+                "Element located by " + by.toString() + " has text '" + driver.findElement(by).getText());
+    }
+}
