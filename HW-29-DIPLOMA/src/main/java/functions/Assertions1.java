@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.logging.Logger;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class Assertions1 {
@@ -19,6 +20,12 @@ public class Assertions1 {
     public void assertElementIsDisplayed(@NotNull By by) {
         logger.info("Asserting that element located by " + by.toString() + " is displayed");
         assertTrue("Element located by " + by.toString() + " is not displayed, but it should be",
+                driver.findElement(by).isDisplayed());
+
+    }
+    public void assertElementIsntDisplayed(@NotNull By by) {
+        logger.info("Asserting that element located by " + by.toString() + " is not displayed");
+        assertFalse("Element located by " + by.toString() + " is not displayed, but it should be",
                 driver.findElement(by).isDisplayed());
     }
 }

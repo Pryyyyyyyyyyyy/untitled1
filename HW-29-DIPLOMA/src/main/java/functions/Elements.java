@@ -58,6 +58,7 @@ public class Elements {
         WebElement element= waiters.waitForPresenceOfElementReturn(by);
         logger.info("Click on element located by"+by);
         element.click();
+        element.getText();
     }
     public void clickOnElementByXpath(String xpath){
         findElementByXpath(xpath).click();
@@ -70,4 +71,19 @@ public class Elements {
     public boolean isElementDisplayed(String xpath){
         return findElementByXpath(xpath).isDisplayed();
     }
+    public String getElementText1(By by) {
+        WebElement element = findElement(by);
+        return element.getText();
+    }
+    public void sendKeysToElement(By by, String keys) {
+        WebElement element = driver.findElement(by);
+        element.sendKeys(keys);
+    }
+    public void submitForm(By by) {
+        WebElement inputField = findElement(by);
+        inputField.sendKeys();
+        inputField.submit();
+    }
+
+
 }

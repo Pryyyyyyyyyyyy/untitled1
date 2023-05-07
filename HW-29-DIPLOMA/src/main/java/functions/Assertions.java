@@ -26,5 +26,15 @@ public class Assertions {
                         elements.getElementText(elements.findElementByXpath(xpath))+".");
     }
 
+    public void assertElementIsntDisplayed(String xpath, String expectectText) {
+        assertEquals(elements.getElementText(elements.findElementByXpath(xpath)),expectectText,
+                "Я ожидал получить текст "+expectectText+". А получил "+
+                        elements.getElementText(elements.findElementByXpath(xpath))+".");
+    }
+    public void assertTextPresentOnPage(String expectedText) {
+        assertTrue(driver.getPageSource().contains(expectedText),
+                "The expected text " + expectedText + " is not present on the page.");
+    }
+
 }
 
