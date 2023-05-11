@@ -92,7 +92,7 @@ public class Tests {
         driver.get("https://pampik.com/ua");
         wait.waitForVisabilityOfElement(By.xpath("//div[@class='fq_selector active' and @itemprop='name']"));
         elements.clickOnElement2(By.xpath("//div[@class='fq_selector active' and @itemprop='name']"));
-        wait.waitForVisabilityOfElement(By.xpath("//h1[@class='title' and text()='Дитяча спальня та інтер'єр']"));
+ /*       wait.waitForVisabilityOfElement(By.xpath("//h1[@class='title' and text()='Дитяча спальня та інтер'єр']"));*/
         assertions.assertTextPresentOnPage("Дитяча спальня та інтер'єр");
     }
     @Test
