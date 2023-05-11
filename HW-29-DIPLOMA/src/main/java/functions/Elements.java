@@ -1,10 +1,7 @@
 package functions;
 
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 
 import java.util.logging.Logger;
 
@@ -83,6 +80,11 @@ public class Elements {
     public void submitForm(By by) {
         WebElement inputField = findElement(by);
         inputField.submit();
+    }
+    public void scrollToElement(By locator) {
+        WebElement element = driver.findElement(locator);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
   /*  public void submitForm1(By locator) {

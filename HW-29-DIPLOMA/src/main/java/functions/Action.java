@@ -1,6 +1,8 @@
 package functions;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import javax.lang.model.element.*;
@@ -95,5 +97,10 @@ public class Action {
         };
     }
 
+    public void moveToElement(By locator) {
+        WebElement element = driver.findElement(locator);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).perform();
+    }
 
 }

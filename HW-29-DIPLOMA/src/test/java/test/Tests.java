@@ -54,13 +54,9 @@ public class Tests {
     public static void testSearch() {
         driver.get("https://pampik.com/ua");
         Duration timeout = Duration.ofSeconds(10);
-      /*  WebDriverWait wait = new WebDriverWait(driver, timeout);*/
         wait.waitForElementToBeClickable(By.xpath("//input[@id='search-form__input']"));
-       /* WebElement searchBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='search-form__input']")));
-        searchBox.sendKeys("Підгузки");*/
         elements.sendKeysToElement(By.xpath("//input[@id='search-form__input']"),"Підгузки");
         wait.waitForTextToBePresentInElementValue(By.xpath("//h1[@class='title']"), "Результати пошуку за запитом 'Підгузки'");
-     /*   wait.until(ExpectedConditions.textToBePresentInElementValue(searchBox, "Підгузки"));*/
     }
     @Test
     public static void testClickCallMeBtn() {
@@ -88,40 +84,40 @@ public class Tests {
         wait.waitForVisabilityOfElement(By.xpath("//div[@class='input-row']/input[@type='email' and @data-validate='required-email']"));
         elements.sendKeysToElement(By.xpath("//div[@class='input-row']/input[@type='email' and @data-validate='required-email']"), "fgdfgfdg");
         elements.submitForm(By.xpath("//div[@class='input-row']/input[@type='email' and @data-validate='required-email']"));
-   /*     assertions.assertTextPresentOnPage("Дякуємо, Ваш email успішно додано!");*/
+   /*     assertions.assertTextPresentOnPage("Дякуємо, Ваш email успішно додано!");*/ // питання по посткондішону
     }
 
     @Test
     public void testClickFqSelector() {
         driver.get("https://pampik.com/ua");
-        wait.waitForVisibilityOfElement(By.xpath("//div[@class='fq_selector active' and @itemprop='name']"));
+        wait.waitForVisabilityOfElement(By.xpath("//div[@class='fq_selector active' and @itemprop='name']"));
         elements.clickOnElement(By.xpath("//div[@class='fq_selector active' and @itemprop='name']"));
-        wait.waitForVisibilityOfElement(By.xpath("//h1[@class='title' and text()='Дитяча спальня та інтер'єр']"));
+        wait.waitForVisabilityOfElement(By.xpath("//h1[@class='title' and text()='Дитяча спальня та інтер'єр']"));
         assertions.assertTextPresentOnPage("Дитяча спальня та інтер'єр");
     }
     @Test
     public void testClickSubMenu() {
         driver.get("https://pampik.com/ua/category/detskaya-komnata-i-bezopasnost");
-        wait.waitForVisibilityOfElement(By.xpath("//span[@class='category-menu-title' and text()='Прогулянки і поїздки']"));
-        actions.moveToElement(elements.findElementByXpath("//span[@class='category-menu-title' and text()='Прогулянки і поїздки']")).perform();
-        wait.waitForVisibilityOfElement(By.xpath("//a[@href='/ua/category/progulocnye-kolaski']"));
+        wait.waitForVisabilityOfElement(By.xpath("//span[@class='category-menu-title' and text()='Прогулянки і поїздки']"));
+        action.moveToElement(elements.findElementByXpath("//span[@class='category-menu-title' and text()='Прогулянки і поїздки']")).perform();
+        wait.waitForVisabilityOfElement(By.xpath("//a[@href='/ua/category/progulocnye-kolaski']"));
         elements.clickOnElement(By.xpath("//a[@href='/ua/category/progulocnye-kolaski']"));
-        wait.waitForVisibilityOfElement(By.xpath("//h1[@class='title' and @itemprop='Name' and text()='Дитячі прогулянкові коляски']"));
+        wait.waitForVisabilityOfElement(By.xpath("//h1[@class='title' and @itemprop='Name' and text()='Дитячі прогулянкові коляски']"));
         assertions.assertTextPresentOnPage("Дитячі прогулянкові коляски");
     }
     @Test
     public void testMoveToElementAndAssertDisplayed() {
         driver.get("https://pampik.com/ua/category/detskaya-komnata-i-bezopasnost");
-        wait.waitForVisibilityOfElement(By.xpath("//a[@class='category-item__title' and text()='Ігрова кімната і безпека']"));
-        actions.moveToElement(elements.findElementByXpath("//a[@class='category-item__title' and text()='Ігрова кімната і безпека']")).perform();
+        wait.waitForVisabilityOfElement(By.xpath("//a[@class='category-item__title' and text()='Ігрова кімната і безпека']"));
+        action.moveToElement(elements.findElementByXpath("//a[@class='category-item__title' and text()='Ігрова кімната і безпека']")).perform();
         elements.clickOnElement(By.xpath("//a[@href='/ua/category/igrovaya-komnata-i-bezopasnost']"));
         assertions.assertElementIsDisplayed(By.xpath("//h1[@class='title' and text()='Дитяча ігрова кімната']"));
     }
     @Test
     public void testClickPampikLinkAndAssertTitle() {
         driver.get("https://pampik.com/ua/category/detskaya-komnata-i-bezopasnost");
-        wait.waitForVisibilityOfElement(By.xpath("//a[@href='#' and text()='pampik.com']"));
-        elements.clickOnElement(By.xpath("//a[@href='#' and text()='pampik.com']"));
+        wait.waitForVisabilityOfElement(By.xpath("//a[@href='#' and text()='pampik.com']"));
+        elements.clickOnElement2(By.xpath("//a[@href='#' and text()='pampik.com']"));
         String pageTitle = driver.getTitle();
         assertions.assertTextPresentOnPage("Ігрова кімната і безпека | | Интернет магазин детских товаров в Украине. Купить товары для детей с доставкой - Pampik.");
     }
