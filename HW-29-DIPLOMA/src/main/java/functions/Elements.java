@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
 import java.util.logging.Logger;
 
 public class Elements {
@@ -81,9 +82,17 @@ public class Elements {
     }
     public void submitForm(By by) {
         WebElement inputField = findElement(by);
-        inputField.sendKeys();
         inputField.submit();
     }
 
+  /*  public void submitForm1(By locator) {
+        WebElement element = wait.waitForPresenceOfElementLocated(locator);
+        element.sendKeys(Keys.ENTER);
+    }*/
+  /*  public void submitForm2(By by) {
+        WebElement inputField = findElement(by);
+         inputField.sendKeys();
+        inputField.submit();
+    }*/
 
 }

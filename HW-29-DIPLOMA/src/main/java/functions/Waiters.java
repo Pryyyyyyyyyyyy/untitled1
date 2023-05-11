@@ -106,4 +106,12 @@ public class Waiters {
         long EXPLICIT_WAIT = 20;
         fluentWait(EXPLICIT_WAIT).until(ExpectedConditions.textToBePresentInElementValue(by, text));
     }
+
+    public WebElement waitForVisibilityOfElement1(By locator) {
+        return fluentWait(EXPLICITY_WAIT).until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    public WebElement waitForVisibilityOfElement2(WebElement element) {
+        return fluentWait(EXPLICITY_WAIT).until(ExpectedConditions.visibilityOf(element));
+    }
 }
