@@ -88,10 +88,10 @@ public class Tests {
     }
 
     @Test
-    public void testClickFqSelector() {
+    public void testClickFqSelector2() {
         driver.get("https://pampik.com/ua");
         wait.waitForVisabilityOfElement(By.xpath("//div[@class='fq_selector active' and @itemprop='name']"));
-        elements.clickOnElement(By.xpath("//div[@class='fq_selector active' and @itemprop='name']"));
+        elements.clickOnElement2(By.xpath("//div[@class='fq_selector active' and @itemprop='name']"));
         wait.waitForVisabilityOfElement(By.xpath("//h1[@class='title' and text()='Дитяча спальня та інтер'єр']"));
         assertions.assertTextPresentOnPage("Дитяча спальня та інтер'єр");
     }
@@ -99,9 +99,9 @@ public class Tests {
     public void testClickSubMenu() {
         driver.get("https://pampik.com/ua/category/detskaya-komnata-i-bezopasnost");
         wait.waitForVisabilityOfElement(By.xpath("//span[@class='category-menu-title' and text()='Прогулянки і поїздки']"));
-        action.moveToElement(elements.findElementByXpath("//span[@class='category-menu-title' and text()='Прогулянки і поїздки']")).perform();
+        action.moveToElement(By.xpath("//span[@class='category-menu-title' and text()='Прогулянки і поїздки']"));
         wait.waitForVisabilityOfElement(By.xpath("//a[@href='/ua/category/progulocnye-kolaski']"));
-        elements.clickOnElement(By.xpath("//a[@href='/ua/category/progulocnye-kolaski']"));
+        elements.clickOnElement2(By.xpath("//a[@href='/ua/category/progulocnye-kolaski']"));
         wait.waitForVisabilityOfElement(By.xpath("//h1[@class='title' and @itemprop='Name' and text()='Дитячі прогулянкові коляски']"));
         assertions.assertTextPresentOnPage("Дитячі прогулянкові коляски");
     }
@@ -109,8 +109,8 @@ public class Tests {
     public void testMoveToElementAndAssertDisplayed() {
         driver.get("https://pampik.com/ua/category/detskaya-komnata-i-bezopasnost");
         wait.waitForVisabilityOfElement(By.xpath("//a[@class='category-item__title' and text()='Ігрова кімната і безпека']"));
-        action.moveToElement(elements.findElementByXpath("//a[@class='category-item__title' and text()='Ігрова кімната і безпека']")).perform();
-        elements.clickOnElement(By.xpath("//a[@href='/ua/category/igrovaya-komnata-i-bezopasnost']"));
+        action.moveToElement(By.xpath("//a[@class='category-item__title' and text()='Ігрова кімната і безпека']"));
+        elements.clickOnElement2(By.xpath("//a[@href='/ua/category/igrovaya-komnata-i-bezopasnost']"));
         assertions.assertElementIsDisplayed(By.xpath("//h1[@class='title' and text()='Дитяча ігрова кімната']"));
     }
     @Test
@@ -129,10 +129,10 @@ public class Tests {
         elements.scrollToElement(By.cssSelector("h5.section-title.blog-view__title"));
 
         wait.waitForVisabilityOfElement(By.cssSelector("button.slick-next.slick-arrow"));
-        elements.clickOnElement(By.cssSelector("button.slick-next.slick-arrow"));
+        elements.clickOnElement2(By.cssSelector("button.slick-next.slick-arrow"));
 
         wait.waitForVisabilityOfElement(By.cssSelector("button.slick-prev.slick-arrow"));
-        elements.clickOnElement(By.cssSelector("button.slick-prev.slick-arrow"));
+        elements.clickOnElement2(By.cssSelector("button.slick-prev.slick-arrow"));
 
 
     }
