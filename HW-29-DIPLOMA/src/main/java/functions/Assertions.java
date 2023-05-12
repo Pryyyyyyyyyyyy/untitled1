@@ -47,6 +47,10 @@ public class Assertions {
                 driver.findElement(by).isDisplayed());
 
     }
+    public void assertTextPresentOnPage1(String expectedText) {
+        assertTrue(driver.getPageSource().contains(expectedText),
+                "The expected text " + expectedText + " is not present on the page.");
+    }
 
 }
 
