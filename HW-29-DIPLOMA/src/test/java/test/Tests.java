@@ -116,9 +116,9 @@ public class Tests {
         driver.get("https://pampik.com/ua/category/detskaya-komnata-i-bezopasnost");
         wait.waitForVisabilityOfElement(By.xpath("//a[@href='#' and text()='pampik.com']"));
         elements.clickOnElement2(By.xpath("//a[@href='#' and text()='pampik.com']"));
-        String pageTitle = driver.getTitle();
-        assertions.assertTextPresentOnPage("Ігрова кімната і безпека | | Интернет магазин детских товаров в Украине. Купить товары для детей с доставкой - Pampik.");
+        assertions.assertTitleEquals("Дитяча кімната і безпека | | Интернет магазин детских товаров в Украине. Купить товары для детей с доставкой - Pampik.");
     }
+
     @Test
     public void testSliderNavigation() {
         driver.get("https://pampik.com/ua/category/detskaya-komnata-i-bezopasnost");
