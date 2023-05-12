@@ -58,6 +58,17 @@ public class Elements {
         element.click();
         element.getText();
     }
+    public String clickOnElement3(By by) {
+        WebElement element = waiters.waitForPresenceOfElementReturn(by);
+        logger.info("Click on element located by " + by);
+
+        String text = element.getText();
+        element.click();
+
+        return text;
+    }
+
+
     public void clickOnElementByXpath(String xpath){
         findElementByXpath(xpath).click();
     }

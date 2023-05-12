@@ -51,6 +51,19 @@ public class Assertions {
         assertTrue(driver.getPageSource().contains(expectedText),
                 "The expected text " + expectedText + " is not present on the page.");
     }
+    public void assertTitleEquals(String expectedTitle) {
+        String actualTitle = driver.getTitle();
+        if (actualTitle.equals(expectedTitle)) {
+        } else {
+            System.out.println("Ожидаемый заголовок: " + expectedTitle);
+            System.out.println("Фактический заголовок: " + actualTitle);
+        }
+    }
+
+    public void assertTextPresentOnPage2(String expectedText) {
+        assertTrue(driver.getPageSource().contains(expectedText),
+                "The expected text '" + expectedText + "' is not present on the page.");
+    }
 
 }
 

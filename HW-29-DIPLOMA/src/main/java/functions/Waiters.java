@@ -114,4 +114,7 @@ public class Waiters {
     public WebElement waitForVisibilityOfElement2(WebElement element) {
         return fluentWait(EXPLICITY_WAIT).until(ExpectedConditions.visibilityOf(element));
     }
+    public Boolean waitForTitle1(String expectedTitle) {
+        return fluentWait(EXPLICITY_WAIT).until(ExpectedConditions.titleIs(expectedTitle));
+    }
 }

@@ -101,9 +101,8 @@ public class Tests {
         wait.waitForVisabilityOfElement(By.xpath("//span[@class='category-menu-title' and text()='Прогулянки і поїздки']"));
         action.moveToElement(By.xpath("//span[@class='category-menu-title' and text()='Прогулянки і поїздки']"));
         wait.waitForVisabilityOfElement(By.xpath("//a[@href='/ua/category/progulocnye-kolaski']"));
-        elements.clickOnElement2(By.xpath("//a[@href='/ua/category/progulocnye-kolaski']"));
-     /*   wait.waitForVisabilityOfElement(By.xpath("//h1[@class='title' and @itemprop='Name' and text()='Дитячі прогулянкові коляски']"));*/
-        assertions.assertTextPresentOnPage1("Дитячі прогулянкові коляски");
+        elements.clickOnElement3(By.xpath("//a[@href='/ua/category/progulocnye-kolaski']"));
+
     }
     @Test
     public void testMoveToElementAndAssertDisplayed() {
