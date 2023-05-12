@@ -46,7 +46,7 @@ public class Tests {
     @Test
     public static void testClickRusLink() {
         driver.get("https://pampik.com/ua");
-        elements.clickOnElement2(By.xpath("//a[@data-lang='ru-RU']"));
+        elements.clickOnElement3(By.xpath("//a[@data-lang='ru-RU']"));
         logger.info("Clicked on RU link from home page");
     }
 
