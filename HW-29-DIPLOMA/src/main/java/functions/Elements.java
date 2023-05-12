@@ -87,6 +87,7 @@ public class Elements {
     public void sendKeysToElement(By by, String keys) {
         WebElement element = driver.findElement(by);
         element.sendKeys(keys);
+        element.submit();
     }
     public void submitForm(By by) {
         WebElement inputField = findElement(by);
