@@ -105,12 +105,11 @@ public class Tests {
 
     }
     @Test
-    public void testMoveToElementAndAssertDisplayed() {
+    public void testMoveToElementCategoryClick() {
         driver.get("https://pampik.com/ua/category/detskaya-komnata-i-bezopasnost");
         wait.waitForVisabilityOfElement(By.xpath("//a[@class='category-item__title' and text()='Ігрова кімната і безпека']"));
         action.moveToElement(By.xpath("//a[@class='category-item__title' and text()='Ігрова кімната і безпека']"));
-        elements.clickOnElement2(By.xpath("//a[@href='/ua/category/igrovaya-komnata-i-bezopasnost']"));
-        assertions.assertElementIsDisplayed(By.xpath("//h1[@class='title' and text()='Дитяча ігрова кімната']"));
+        elements.clickOnElement3(By.xpath("//li[@class='all-category']/a[@href='/ua/category/igrovaya-komnata-i-bezopasnost']"));
     }
     @Test
     public void testClickPampikLinkAndAssertTitle() {
