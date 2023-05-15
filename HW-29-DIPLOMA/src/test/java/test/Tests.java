@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -172,6 +173,7 @@ public class Tests {
         elements.clickOnElement3(By.xpath("//*[@id='main']/div/div[1]/div[1]/ul[2]/li[1]/a"));
         assertions.assertTitleEquals("Сумка в роддом. Выберите готовый набор или составьте свой список.");
     }
+    @AfterTest
     public void closeDriver(){
         logger.info("CLOSING DRIVER");
         driver.quit();
