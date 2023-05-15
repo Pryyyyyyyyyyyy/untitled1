@@ -147,9 +147,10 @@ public class Tests {
         driver.get("https://pampik.com/ua/promo");
         wait.waitForVisabilityOfElement(By.xpath("//span[text()='Зміни в умовах доставки']"));
         elements.clickOnElement2(By.xpath("//span[@class='banner-link icon icon-big-arrow' and span[text()='Перейти']]"));
-        assertions.assertTextPresentOnPage("Зміни в умовах доставки");
+       /* wait.waitForPresenceOfElementReturn(By.xpath("//div[@class='title']/h2"));*/
+        assertions.assertElementIsDisplayed(By.xpath("//div[contains(@class, 'banner-item')]//span[contains(text(), 'Зміни в умовах доставки')]"));
     }
-
+    //div[@class='title']/h2[@itemprop='headline']
     @Test
     public void testClickContactUsTooltipAndAssertText() {
         driver.get("https://pampik.com/ua/promo");
