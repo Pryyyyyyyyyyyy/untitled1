@@ -134,5 +134,47 @@ public class Tests {
 
 
     }
+/////////////////////////////////////
+    @Test
+    public void testClickChildRoomLinkAndAssertTitle() {
+        driver.get("https://pampik.com/ua/promo");
+        wait.waitForVisabilityOfElement(By.xpath("//a[@class='check-box__label' and contains(text(), 'Дитяча кімната')]"));
+        elements.clickOnElement2(By.xpath("//a[@class='check-box__label' and contains(text(), 'Дитяча кімната')]"));
+        assertions.assertTitleEquals("Дитяча кімната | Интернет магазин детских товаров в Украине. Купить товары для детей с доставкой - Pampik.");
+    }
+    @Test
+    public void testClickBannerLinkAndAssertText() {
+        driver.get("https://pampik.com/ua/promo");
+        wait.waitForVisabilityOfElement(By.xpath("//span[text()='Зміни в умовах доставки']"));
+        elements.clickOnElement2(By.xpath("//span[@class='banner-link icon icon-big-arrow' and span[text()='Перейти']]"));
+        assertions.assertTextPresentOnPage("Зміни в умовах доставки");
+    }
 
+    @Test
+    public void testClickContactUsTooltipAndAssertText() {
+        driver.get("https://pampik.com/ua/promo");
+        wait.waitForVisabilityOfElement(By.xpath("//div[@class='rngst_phone_body--tooltip rngst_phone_icon']"));
+        elements.clickOnElement2(By.xpath("//div[@class='rngst_phone_body--tooltip rngst_phone_icon']"));
+        wait.waitForVisabilityOfElement(By.xpath("//a[@class='messengers-icon-btn' and contains(@href, 'telegram')]"));
+        assertions.assertTextPresentOnPage("Telegram");
+        logger.info("Telegram");
+    }
+    @Test
+    public void testClickDishwashingSuppliesLinkAndAssertTitle() {
+        driver.get("https://pampik.com/ua/promo");
+        wait.waitForVisabilityOfElement(By.xpath("//h2[text()='Види акцій та знижок']"));
+        elements.clickOnElement2(By.xpath("//a[text()='засоби для миття посуду']"));
+        assertions.assertTitleEquals("Засоби для миття посуду | Интернет магазин детских товаров в Украине. Купить товары для детей с доставкой - Pampik.");
+    }
+    @Test
+    public void testClickDeliveryBagLinkAndAssertText() {
+        driver.get("https://pampik.com/ua/promo");
+        wait.waitForVisabilityOfElement(By.xpath("//a[@class='transparent-link transparent-link--violet' and contains(text(), 'Сумка у пологовий будинок')]"));
+        elements.clickOnElement2(By.xpath("//a[@class='transparent-link transparent-link--violet' and contains(text(), 'Сумка у пологовий будинок')]"));
+        assertions.assertTextPresentOnPage("Сумка в роддом Стандартный набор");
+    }
+    public void closeDriver(){
+        logger.info("CLOSING DRIVER");
+        driver.quit();
+    }
 }
