@@ -146,11 +146,10 @@ public class Tests {
     public void testClickBannerLinkAndAssertText() {
         driver.get("https://pampik.com/ua/promo");
         wait.waitForVisabilityOfElement(By.xpath("//span[text()='Зміни в умовах доставки']"));
-        elements.clickOnElement2(By.xpath("//span[@class='banner-link icon icon-big-arrow' and span[text()='Перейти']]"));
-       /* wait.waitForPresenceOfElementReturn(By.xpath("//div[@class='title']/h2"));*/
+        elements.clickOnElement3(By.xpath("//span[@class='banner-link icon icon-big-arrow' and span[text()='Перейти']]"));
         assertions.assertElementIsDisplayed(By.xpath("//div[contains(@class, 'banner-item')]//span[contains(text(), 'Зміни в умовах доставки')]"));
     }
-    //div[@class='title']/h2[@itemprop='headline']
+
     @Test
     public void testClickContactUsTooltipAndAssertText() {
         driver.get("https://pampik.com/ua/promo");
@@ -164,7 +163,7 @@ public class Tests {
     public void testClickDishwashingSuppliesLinkAndAssertTitle() {
         driver.get("https://pampik.com/ua/promo");
         wait.waitForVisabilityOfElement(By.xpath("//h2[text()='Види акцій та знижок']"));
-        elements.clickOnElement2(By.xpath("//a[text()='засоби для миття посуду']"));
+        elements.clickOnElement3(By.xpath("//a[@href='https://pampik.com/ua/category/sredstva-dlya-myitya-posudyi']"));
         assertions.assertTitleEquals("Засоби для миття посуду | Интернет магазин детских товаров в Украине. Купить товары для детей с доставкой - Pampik.");
     }
     @Test
