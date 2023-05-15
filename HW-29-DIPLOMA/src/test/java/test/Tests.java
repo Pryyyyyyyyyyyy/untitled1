@@ -134,7 +134,6 @@ public class Tests {
 
 
     }
-/////////////////////////////////////
     @Test
     public void testClickChildRoomLinkAndAssertTitle() {
         driver.get("https://pampik.com/ua/promo");
@@ -169,9 +168,9 @@ public class Tests {
     @Test
     public void testClickDeliveryBagLinkAndAssertText() {
         driver.get("https://pampik.com/ua/promo");
-        wait.waitForVisabilityOfElement(By.xpath("//a[@class='transparent-link transparent-link--violet' and contains(text(), 'Сумка у пологовий будинок')]"));
-        elements.clickOnElement2(By.xpath("//a[@class='transparent-link transparent-link--violet' and contains(text(), 'Сумка у пологовий будинок')]"));
-        assertions.assertTextPresentOnPage("Сумка в роддом Стандартный набор");
+        wait.waitForPresenceOfElement(By.xpath("//a[@class='transparent-link transparent-link--violet' and contains(text(), 'Сумка у пологовий будинок')]"));
+        elements.clickOnElement3(By.xpath("//*[@id='main']/div/div[1]/div[1]/ul[2]/li[1]/a"));
+        assertions.assertTitleEquals("Сумка в роддом. Выберите готовый набор или составьте свой список.");
     }
     public void closeDriver(){
         logger.info("CLOSING DRIVER");
