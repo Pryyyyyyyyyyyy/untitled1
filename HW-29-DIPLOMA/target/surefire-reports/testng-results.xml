@@ -2,76 +2,76 @@
 <testng-results ignored="0" total="15" passed="15" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-28T15:51:44 EEST" name="Surefire suite" finished-at="2023-05-28T15:52:36 EEST" duration-ms="52464">
+  <suite started-at="2023-05-28T16:15:46 EEST" name="Surefire suite" finished-at="2023-05-28T16:16:47 EEST" duration-ms="61198">
     <groups>
     </groups>
-    <test started-at="2023-05-28T15:51:44 EEST" name="Surefire test" finished-at="2023-05-28T15:52:36 EEST" duration-ms="52464">
+    <test started-at="2023-05-28T16:15:46 EEST" name="Surefire test" finished-at="2023-05-28T16:16:47 EEST" duration-ms="61198">
       <class name="test.Tests">
-        <test-method is-config="true" signature="setupDriver()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T15:51:44 EEST" name="setupDriver" finished-at="2023-05-28T15:51:47 EEST" duration-ms="3282" status="PASS">
+        <test-method is-config="true" signature="setupDriver()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T16:15:46 EEST" name="setupDriver" finished-at="2023-05-28T16:15:49 EEST" duration-ms="3113" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupDriver -->
-        <test-method signature="testClickBannerLinkAndAssertText()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T15:51:47 EEST" name="testClickBannerLinkAndAssertText" finished-at="2023-05-28T15:51:56 EEST" duration-ms="9057" status="PASS">
+        <test-method signature="testClickBannerLinkAndAssertText()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T16:15:49 EEST" name="testClickBannerLinkAndAssertText" finished-at="2023-05-28T16:15:55 EEST" duration-ms="6091" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClickBannerLinkAndAssertText -->
-        <test-method signature="testClickCallMeBtn()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T15:51:56 EEST" name="testClickCallMeBtn" finished-at="2023-05-28T15:52:01 EEST" duration-ms="4348" status="PASS">
+        <test-method signature="testClickCallMeBtn()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T16:15:55 EEST" name="testClickCallMeBtn" finished-at="2023-05-28T16:15:58 EEST" duration-ms="2507" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClickCallMeBtn -->
-        <test-method signature="testClickChildRoomLinkAndAssertTitle()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T15:52:01 EEST" name="testClickChildRoomLinkAndAssertTitle" finished-at="2023-05-28T15:52:04 EEST" duration-ms="3306" status="PASS">
+        <test-method signature="testClickChildRoomLinkAndAssertTitle()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T16:15:58 EEST" name="testClickChildRoomLinkAndAssertTitle" finished-at="2023-05-28T16:16:02 EEST" duration-ms="3564" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClickChildRoomLinkAndAssertTitle -->
-        <test-method signature="testClickContactUsTooltipAndAssertText()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T15:52:04 EEST" name="testClickContactUsTooltipAndAssertText" finished-at="2023-05-28T15:52:06 EEST" duration-ms="1790" status="PASS">
+        <test-method signature="testClickContactUsTooltipAndAssertText()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T16:16:02 EEST" name="testClickContactUsTooltipAndAssertText" finished-at="2023-05-28T16:16:04 EEST" duration-ms="2253" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClickContactUsTooltipAndAssertText -->
-        <test-method signature="testClickDeliveryBagLinkAndAssertText()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T15:52:06 EEST" name="testClickDeliveryBagLinkAndAssertText" finished-at="2023-05-28T15:52:10 EEST" duration-ms="4011" status="PASS">
+        <test-method signature="testClickDeliveryBagLinkAndAssertText()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T16:16:04 EEST" name="testClickDeliveryBagLinkAndAssertText" finished-at="2023-05-28T16:16:08 EEST" duration-ms="4286" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClickDeliveryBagLinkAndAssertText -->
-        <test-method signature="testClickDishwashingSuppliesLinkAndAssertTitle()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T15:52:10 EEST" name="testClickDishwashingSuppliesLinkAndAssertTitle" finished-at="2023-05-28T15:52:13 EEST" duration-ms="2911" status="PASS">
+        <test-method signature="testClickDishwashingSuppliesLinkAndAssertTitle()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T16:16:08 EEST" name="testClickDishwashingSuppliesLinkAndAssertTitle" finished-at="2023-05-28T16:16:18 EEST" duration-ms="9853" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClickDishwashingSuppliesLinkAndAssertTitle -->
-        <test-method signature="testClickFqSelector()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T15:52:13 EEST" name="testClickFqSelector" finished-at="2023-05-28T15:52:15 EEST" duration-ms="2624" status="PASS">
+        <test-method signature="testClickFqSelector()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T16:16:18 EEST" name="testClickFqSelector" finished-at="2023-05-28T16:16:21 EEST" duration-ms="3391" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClickFqSelector -->
-        <test-method signature="testClickFqSelector2()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T15:52:15 EEST" name="testClickFqSelector2" finished-at="2023-05-28T15:52:17 EEST" duration-ms="1864" status="PASS">
+        <test-method signature="testClickFqSelector2()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T16:16:21 EEST" name="testClickFqSelector2" finished-at="2023-05-28T16:16:24 EEST" duration-ms="3152" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClickFqSelector2 -->
-        <test-method signature="testClickPampikLinkAndAssertTitle()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T15:52:17 EEST" name="testClickPampikLinkAndAssertTitle" finished-at="2023-05-28T15:52:19 EEST" duration-ms="1999" status="PASS">
+        <test-method signature="testClickPampikLinkAndAssertTitle()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T16:16:24 EEST" name="testClickPampikLinkAndAssertTitle" finished-at="2023-05-28T16:16:28 EEST" duration-ms="3190" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClickPampikLinkAndAssertTitle -->
-        <test-method signature="testClickRusLink()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T15:52:19 EEST" name="testClickRusLink" finished-at="2023-05-28T15:52:21 EEST" duration-ms="2053" status="PASS">
+        <test-method signature="testClickRusLink()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T16:16:28 EEST" name="testClickRusLink" finished-at="2023-05-28T16:16:30 EEST" duration-ms="2002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClickRusLink -->
-        <test-method signature="testClickSubMenu()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T15:52:21 EEST" name="testClickSubMenu" finished-at="2023-05-28T15:52:24 EEST" duration-ms="3143" status="PASS">
+        <test-method signature="testClickSubMenu()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T16:16:30 EEST" name="testClickSubMenu" finished-at="2023-05-28T16:16:34 EEST" duration-ms="4408" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClickSubMenu -->
-        <test-method signature="testMoveToElementCategoryClick()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T15:52:24 EEST" name="testMoveToElementCategoryClick" finished-at="2023-05-28T15:52:28 EEST" duration-ms="3121" status="PASS">
+        <test-method signature="testMoveToElementCategoryClick()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T16:16:34 EEST" name="testMoveToElementCategoryClick" finished-at="2023-05-28T16:16:37 EEST" duration-ms="3234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMoveToElementCategoryClick -->
-        <test-method signature="testSearch()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T15:52:28 EEST" name="testSearch" finished-at="2023-05-28T15:52:31 EEST" duration-ms="3087" status="PASS">
+        <test-method signature="testSearch()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T16:16:37 EEST" name="testSearch" finished-at="2023-05-28T16:16:41 EEST" duration-ms="3356" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearch -->
-        <test-method signature="testSliderNavigation()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T15:52:31 EEST" name="testSliderNavigation" finished-at="2023-05-28T15:52:33 EEST" duration-ms="2260" status="PASS">
+        <test-method signature="testSliderNavigation()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T16:16:41 EEST" name="testSliderNavigation" finished-at="2023-05-28T16:16:43 EEST" duration-ms="2512" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSliderNavigation -->
-        <test-method signature="testSubmitEmail()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T15:52:33 EEST" name="testSubmitEmail" finished-at="2023-05-28T15:52:36 EEST" duration-ms="3185" status="PASS">
+        <test-method signature="testSubmitEmail()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T16:16:43 EEST" name="testSubmitEmail" finished-at="2023-05-28T16:16:47 EEST" duration-ms="3903" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSubmitEmail -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T15:52:36 EEST" name="closeDriver" finished-at="2023-05-28T15:52:36 EEST" duration-ms="257" status="PASS">
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:test.Tests@149e0f5d]" started-at="2023-05-28T16:16:47 EEST" name="closeDriver" finished-at="2023-05-28T16:16:47 EEST" duration-ms="257" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
